@@ -2,4 +2,5 @@
 This is a Artsy Landing Page for an imaginary gallery.
 
 This is a preview of the landing page,
-![Uploading Screenshot 2021-05-30 at 8.39.07 AM.png…]()
+
+![Landing Page Preview](https://user-images.githubusercontent.com/54065262/120090792-cef2ce80-c122-11eb-87dc-1b8a593ece08.png)
