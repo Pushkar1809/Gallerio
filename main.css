@@ -1,0 +1,107 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background-color: #1b1918;
+  overflow: hidden;
+  cursor: none;
+}
+
+.logo {
+  position: relative;
+  font-family: "Julius Sans One", sans-serif;
+  color: #f69400;
+  position: absolute;
+  top: 4rem;
+  left: 9rem;
+  font-size: 1.5rem;
+  letter-spacing: 1.5rem;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: rgba(246, 148, 0, 0.6);
+  top: 1rem;
+  left: 0;
+}
+
+.container {
+  color: #ffe3b8;
+  pointer-events: none;
+  font-family: "Six Caps", sans-serif;
+  font-size: 15rem;
+  letter-spacing: 4px;
+  line-height: 18rem;
+  margin-left: 9rem;
+}
+
+.container .text-1 {
+  margin-top: 8rem;
+}
+
+.container .text-2 {
+  position: relative;
+  z-index: 2;
+}
+
+.sub {
+  font-family: "Playfair Display SC", serif;
+  font-size: 1.8rem;
+  color: #fff5e7;
+  margin-left: 9rem;
+  margin-top: 2rem;
+  pointer-events: none;
+}
+
+.bg {
+  position: absolute;
+  height: 100vh;
+  width: 40%;
+  right: 0;
+  background: url("./assets/artist.jpeg");
+  background-size: cover;
+  mix-blend-mode: luminosity;
+  opacity: 0.13;
+  z-index: -1;
+}
+
+.img {
+  position: absolute;
+  width: 28rem;
+  height: 18rem;
+  top: 35%;
+  left: 25%;
+  z-index: 1;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.img:hover {
+  opacity: 0.5;
+}
+
+.cursor {
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 227, 184, 0.8);
+  margin-left: -1.5em;
+  margin-top: -1.5em;
+}
+/*# sourceMappingURL=main.css.map */

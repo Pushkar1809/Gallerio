@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Playfair+Display+SC&family=Six+Caps&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./main.css" />
+		<title>Gallerio 🧑‍🎨</title>
+	</head>
+	<body>
+		<div class="bg"></div>
+		<div class="logo">Gallerio</div>
+		<div class="container">
+			<div class="text-1">Tasty art that will</div>
+			<div class="text-2">leave you in Aww!</div>
+		</div>
+		<p class="sub">
+			Experience the <em>shimmers</em> of the <em>wonderful</em> thing that
+			<em>art</em> is.
+		</p>
+		<div class="img"></div>
+		<div class="cursor"></div>
+	</body>
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+		integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"
+	></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+		integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"
+	></script>
+	<script src="hover.js"></script>
+	<script>
+		// let textWrapper1 = document.querySelector(".text-1");
+		// textWrapper1.innerHTML = textWrapper1.textContent.replace(
+		// 	/\S/g,
+		// 	"<span class='letter'>$&</span>",
+		// );
+		// let textWrapper2 = document.querySelector(".text-2");
+		// textWrapper2.innerHTML = textWrapper2.textContent.replace(
+		// 	/\S/g,
+		// 	"<span class='letter'>$&</span>",
+		// );
+
+		// let tl = gsap.timeline();
+
+		// tl.to(".title-1 .letter", {
+		// 	opacity: 1,
+		// 	y: "0",
+		// 	clipPath: "clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+		// 	stagger: "0.03",
+		// });
+		// tl.to(
+		// 	".title-2 .letter",
+		// 	{
+		// 		opacity: 1,
+		// 		y: "0",
+		// 		clipPath: "clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+		// 		stagger: "0.03",
+		// 	},
+		// 	"-=0.7",
+		// );
+
+		new hoverEffect({
+			parent: document.querySelector(".img"),
+			intensity: 0.3,
+			image1: "assets/abs1.jpeg",
+			image2: "assets/abs2.jpeg",
+			displacementImage: "assets/effect.png",
+		});
+
+		let img = document.querySelector(".img");
+		let title = document.querySelector(".container");
+		let cursorCirlce = document.querySelector(".cursor");
+
+		let cursor = {
+			x: 0,
+			y: 0,
+		};
+
+		document.addEventListener("mousemove", (e) => {
+			cursor.x = -e.clientX * 0.15;
+			cursor.y = -e.clientY * 0.15;
+
+			img.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
+			cursorCirlce.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+		});
+	</script>
+</html>
